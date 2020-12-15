@@ -9,8 +9,8 @@ import { HttpClientModule} from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { CarDetailsComponent } from './car-details/car-details.component';
-import { ContactComponent } from './contact/contact.component';
-import { AboutComponent } from './about/about.component';
+
+
 
 @NgModule({
   declarations: [
@@ -18,9 +18,9 @@ import { AboutComponent } from './about/about.component';
     LoginComponent,
     RegisterComponent,
  
-    CarDetailsComponent,
-    ContactComponent,
-    AboutComponent
+    CarDetailsComponent
+
+   
   ],
   imports: [
     BrowserModule,

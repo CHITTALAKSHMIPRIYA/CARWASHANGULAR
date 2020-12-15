@@ -4,7 +4,7 @@ import { RegisterComponent } from './register/register.component';
 import { LoginComponent } from './login/login.component'
 
 import { CarDetailsComponent } from './car-details/car-details.component';
-import { AboutComponent } from './about/about.component';
+
 
 
 const routes: Routes = [
@@ -16,7 +16,7 @@ const routes: Routes = [
 },
 
 { path: 'login', component: LoginComponent},
-{path: 'about' , component: AboutComponent},
+
 { path: 'addDetails', component: CarDetailsComponent},
 { path: 'register', component: RegisterComponent}
 ];
