@@ -1,0 +1,62 @@
+
+<body>
+ <!--<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">-->
+ <!--<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">-->
+ 
+ <form [formGroup]="loginForm" #formreg="ngForm" (ngSubmit)="loginNow(formreg)" novalidate>
+    <div class="container">
+      
+      <!-- <p>Please fill in this form to create an account.</p> -->
+      
+  
+      <div class="input-container">
+        <i class="fa fa-user icon" style="font-size: 32px;color:black"></i>
+        <input class="input-field" type="text" formControlName="userName" placeholder="Enter your username" ngModel name="userName"
+        id="name" [ngClass]="{ 'is-invalid': submitted && f.userName.errors }" />
+        <div *ngIf="submitted && f.userName.errors" class="invalid-data">
+          <div *ngIf="f.userName.errors.required">username is required</div>
+        </div>
+      </div>
+      
+      <div class="input-container">
+        <i class="fa fa-key icon" style="font-size: 32px;color:black"></i>
+        <input class="input-field" type="password" placeholder="Password" formControlName="password" ngModel name="password"
+        [ngClass]="{'is-invalid': submitted && f.password.errors}" />
+        <div *ngIf="submitted && f.password.errors" class="invalid-data">
+          <div *ngIf="f.password.errors.required">password is required!</div>
+          <div *ngIf="f.password.errors.minlength">password must be atleast 5 characters!</div>
+        </div>
+      </div>
+      
+      <div class="input-container">
+        <i class="fa fa-user icon" style="font-size: 32px;color:black"></i>
+        <select class="input-field" type="text"  formControlName="role" placeholder="Enter your role..." ngModel name="role"
+        id="role" [ngClass]="{ 'is-invalid': submitted && f.role.errors }">
+                            <option value="customer" selected>Customer</option>
+                            
+                            
+        <div *ngIf="f.role.errors.required">role is required!</div>
+      </select>
+      </div>
+
+    
+      
+      <!-- <p><span><input type="checkbox" checked="checked" name="agreeterms"></span> &nbsp;By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p> -->
+  
+      <button type="submit" class="registerbtn" >Login</button>
+      <div class="container signin">
+      
+       
+      <p>New User? 
+        <a [routerLink]="['/register']">Register Here</a></p>
+      </div>
+    </div>
+    
+    
+  </form>
+</body>
+
+
+
+
+ 

@@ -1,0 +1,211 @@
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+ <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<h1 id="title">Green Car Care Boutique</h1>
+<div class="header">
+
+</div>
+<img id="image" src="../assets/image/carwash.png">
+<h2 id="caption">The shine that lasts forever</h2>
+<p>Car wash is a facility used to clean the exterior and, in some cases, 
+  the interior of motor vehicles. Car washes can be self-serve, 
+  fully automated, or full-service with attendants who wash the vehicle. It may also be an 
+  event where people pay to have their cars washed by volunteers as a method to raise money for some purpose</p>
+<div class="container">
+
+    <form action="/action_page.php">
+
+      <div class="row">
+        <div class="col-50">
+          <h3> Address</h3>
+          <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+          <input type="text" id="fname" name="firstname" placeholder="John M. Doe">
+          <label for="email"><i class="fa fa-envelope"></i> Email</label>
+          <input type="text" id="email" name="email" placeholder="john@example.com">
+          <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+          <input type="text" id="adr" name="address" placeholder="542 W. 15th Street">
+          <label for="city"><i class="fa fa-institution"></i> City</label>
+          <input type="text" id="city" name="city" placeholder="New York">
+
+          <div class="row">
+            <div class="col-50">
+              <label for="state">State</label>
+              <input type="text" id="state" name="state" placeholder="NY">
+            </div>
+            <div class="col-50">
+              <label for="zip">Zip</label>
+              <input type="text" id="zip" name="zip" placeholder="10001">
+            </div>
+          </div>
+        </div>
+
+  <div style="text-align: right;">
+    <h3>Welcome {{custName1}}!!</h3>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <fieldset>
+
+        <h4>Add Details</h4>
+        
+
+        <div class="form-group">
+          
+            <label class="required">CarName</label>
+          <!-- <label for="carName">CarName :</label> -->
+          <input type="text" class="form-control" id="userName" [(ngModel)]="custCarDetails.carName" name="userName"
+            id="txt" placeholder="Enter car name" required>
+        </div>
+
+        <div class="form-group">
+          <label class="required">Payment Details </label>
+          <style>
+              .required:after {
+                content:" *";
+                color: red;
+              }
+            </style>
+          <!-- <label for="paymentDetails">Payment:</label> -->
+          <select input type="text" class="form-control" id="paymentDetails" [(ngModel)]="custCarDetails.paymentDetails"
+            name="paymentDetails" id="txt" placeholder="select mode of payment" required>
+            
+            <option value="credit card" selected>Credit/debit card</option>
+            
+          </select>
+
+        </div>
+        <label for="fname">Accepted Cards</label>
+        <div class="icon-container">
+          <i class="fa fa-cc-visa" style="color:navy;"></i>
+          <i class="fa fa-cc-amex" style="color:blue;"></i>
+          <i class="fa fa-cc-mastercard" style="color:red;"></i>
+          <i class="fa fa-cc-discover" style="color:orange;"></i>
+        </div>
+        <div class="col-50">
+        <label for="cname">Name on Card</label>
+          <input type="text" id="cname" name="cardname" placeholder="John More Doe" >
+          <label for="ccnum">Credit card number</label>
+          <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444">
+          <label for="expmonth">Exp Month</label>
+          <input type="text" id="expmonth" name="expmonth" placeholder="September">
+          <div class="row">
+            <div class="col-50">
+              <label for="expyear">Exp Year</label>
+              <input type="text" id="expyear" name="expyear" placeholder="2018">
+            </div>
+            <div class="col-50">
+              <label for="cvv">CVV</label>
+              <input type="text" id="cvv" name="cvv" placeholder="352">
+            </div>
+          </div>
+        </div>
+        
+        
+
+        <div class="form-group">
+          <label class="required">Package</label>
+          <style>
+              .required:after {
+                content:" *";
+                color: red;
+              }
+            </style>
+          <!-- <label for="packAge">Package :</label> -->
+          <select input type="text" class="form-control" id="packAge" [(ngModel)]="custCarDetails.packAge"
+            name="userName" id="txt" placeholder="select package" required>
+            <option value="gold" selected>Gold</option>
+            <option value="silver " selected>Silver</option>
+            <option value="platinum" selected>Platinum</option>
+          </select>
+        </div>
+       
+
+        <div class="form-group">
+          <label class="required">Date</label>
+          <style>
+              .required:after {
+                content:" *";
+                color: red;
+              }
+            </style>
+          <!-- <label for="date">Date :</label> -->
+          <input type="date" class="form-control" id="date" [(ngModel)]="custCarDetails.date" name="date" id="txt"
+            placeholder="select date" required>
+        </div>
+       
+        <div class="form-group">
+          <label class="required">Time </label>
+          <style>
+              .required:after {
+                content:" *";
+                color: red;
+              }
+            </style>
+          <!-- <label for="time">Time :</label> -->
+          <input type="time" class="form-control" id="time" [(ngModel)]="custCarDetails.time" name="time" id="txt"
+            placeholder="select time" required>
+        </div>
+
+
+        <div class="form-group">
+          <input class="btn btn-success" type="submit" name="submit_reg" value="submit" (click)="saveDetails()">
+         <input class="btn btn-success" type="submit" name="submit_reg" value="view" (click)="viewDetails()"
+            style="float: right;">
+           
+
+
+
+          <div class="main">
+            <!-- <div class="header"> -->
+              <table class="table">
+              </table>
+            </div>
+            <div class="sub">
+
+              <div class="subdiv">
+                <table class="table" *ngIf="display">
+
+                  <thead class="thead-dark">
+                    <th>select</th>
+
+                    <th>Id</th>
+                    <th>CarName</th>
+                    <th>Payment Details</th>
+                    <th>Package</th>
+                    <th>Date</th>
+                    <th>Time</th>
+                    
+                  </thead>
+                  <tbody>
+                    <tr *ngFor='let str of list'>
+                      <td><input type="radio" name="_id" value="{{str._id}}" (change)="radioSelect($event)"></td>
+                      
+                      <td>{{str._id}}</td>
+                      <td>{{str.carName}}</td>
+                      <td>{{str.paymentDetails}}</td>
+                      <td>{{str.packAge}}</td>
+                      <td>{{str.date}}</td>
+                      <td>{{str.time}}</td>
+                      
+
+                    </tr>
+                  </tbody>
+                  <input class="btn btn-success" type="submit" name="submit_reg" value="delete" (click)="delete()" style=" margin: 0;
+                        position: absolute;left: 45%;">
+                </table>
+
+              </div>
+            <!-- </div> -->
+          </div>
+          <a routerLink="/login" >Logout</a>&nbsp;&nbsp;
+        </div>
+      </fieldset>
+    </div>
+  </div>
+
+
+
